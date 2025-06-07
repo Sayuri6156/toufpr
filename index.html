@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CETO/UFPR - Clínica-Escola de Terapia Ocupacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 w-full border-b bg-white shadow-sm">
+        <div class="container mx-auto flex h-20 items-center justify-between py-4 px-4">
+            <div class="flex items-center gap-4">
+                <div class="w-15 h-15 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">UFPR</span>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-blue-900">CETO/UFPR</h1>
+                    <p class="text-sm text-gray-600">Clínica-Escola de Terapia Ocupacional</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+                <a href="#sobre" class="font-medium transition-colors hover:text-blue-600">Sobre</a>
+                <a href="#servicos" class="font-medium transition-colors hover:text-blue-600">Serviços</a>
+                <a href="#fluxo" class="font-medium transition-colors hover:text-blue-600">Como Funciona</a>
+                <a href="#contato" class="font-medium transition-colors hover:text-blue-600">Contato</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <a href="admin-login.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    ADMIN
+                </a>
+                <a href="#" class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-green-600 hover:bg-green-700 text-white px-4 py-2">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-50 to-indigo-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <span class="inline-flex items-center rounded-full border border-blue-600 px-2.5 py-0.5 text-xs font-semibold text-blue-600">
+                                Universidade Federal do Paraná
+                            </span>
+                            <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-blue-900">
+                                Clínica-Escola de Terapia Ocupacional
+                            </h1>
+                            <p class="max-w-[600px] text-gray-600 md:text-xl">
+                                Integrando ensino, pesquisa e extensão para oferecer atendimento especializado em terapia
+                                ocupacional à comunidade.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                            <a href="formulario.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Fazer Inscrição
+                            </a>
+                            <a href="#fluxo" class="inline-flex items-center justify-center rounded-md text-sm font-medium border border-gray-300 bg-white hover:bg-gray-50 px-8 py-3">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                Como Funciona
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-6 text-sm text-gray-600">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                </svg>
+                                <span>Atendimento supervisionado</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                                <span>Formação acadêmica</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                                <span>Cuidado integral</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-auto aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center sm:w-full">
+                        <div class="text-center p-8">
+                            <div class="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Atendimento Supervisionado</h3>
+                            <p class="text-blue-700">Estudantes e professores trabalhando juntos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="mx-auto aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center sm:w-full">
+                        <div class="text-center p-8">
+                            <div class="w-24 h-24 bg-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Campus Jardim Botânico</h3>
+                            <p class="text-blue-700">UFPR - Curitiba/PR</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <span class="inline-flex items-center rounded-full border border-blue-600 px-2.5 py-0.5 text-xs font-semibold text-blue-600">
+                                Sobre a CETO
+                            </span>
+                            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-900">
+                                Formação e Cuidado
+                            </h2>
+                        </div>
+                        <div class="space-y-4 text-gray-600">
+                            <p class="md:text-lg">
+                                A Clínica-Escola de Terapia Ocupacional da UFPR é uma unidade acadêmica vinculada ao Departamento de
+                                Terapia Ocupacional, fundamentada na integração entre ensino, pesquisa e extensão.
+                            </p>
+                            <p>
+                                Nosso propósito principal é proporcionar experiências práticas aos acadêmicos, articulando
+                                conhecimentos teóricos às demandas sociais e de saúde da população. Todo atendimento é
+                                supervisionado por docentes e profissionais qualificados.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="font-medium">Campus Jardim Botânico - Curitiba/PR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Section -->
+        <section id="servicos" class="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <span class="inline-flex items-center rounded-full border border-blue-600 px-2.5 py-0.5 text-xs font-semibold text-blue-600">
+                            Nossos Serviços
+                        </span>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-blue-900">Áreas de Atendimento</h2>
+                        <p class="max-w-[900px] text-gray-600 md:text-xl">
+                            Oferecemos atendimento especializado em duas principais áreas de atuação da terapia ocupacional.
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-2">
+                    <div class="relative overflow-hidden border-2 hover:border-blue-200 transition-colors rounded-lg bg-white shadow-sm">
+                        <div class="p-6 pb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-blue-900 font-semibold">Reabilitação Neurológica</h3>
+                        </div>
+                        <div class="p-6 pt-0 space-y-4">
+                            <p class="text-gray-600">
+                                Atendimento especializado para adultos com condições neurológicas, focando na recuperação funcional
+                                e independência.
+                            </p>
+                            <div class="space-y-2">
+                                <h4 class="font-semibold text-blue-900">Principais condições atendidas:</h4>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li>• Acidente Vascular Cerebral (AVC)</li>
+                                    <li>• Lesões encefálicas</li>
+                                    <li>• Outras condições neurológicas</li>
+                                    <li>• Reabilitação física e funcional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden border-2 hover:border-blue-200 transition-colors rounded-lg bg-white shadow-sm">
+                        <div class="p-6 pb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-blue-900 font-semibold">Desenvolvimento Infantil</h3>
+                        </div>
+                        <div class="p-6 pt-0 space-y-4">
+                            <p class="text-gray-600">
+                                Acompanhamento especializado no desenvolvimento infantil, com ênfase no atendimento a crianças com
+                                necessidades especiais.
+                            </p>
+                            <div class="space-y-2">
+                                <h4 class="font-semibold text-blue-900">Principais focos:</h4>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li>• Transtorno do Espectro Autista (TEA)</li>
+                                    <li>• Atrasos no desenvolvimento</li>
+                                    <li>• Dificuldades de integração sensorial</li>
+                                    <li>• Habilidades motoras e cognitivas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fluxo de Atendimento -->
+        <section id="fluxo" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <span class="inline-flex items-center rounded-full border border-blue-600 px-2.5 py-0.5 text-xs font-semibold text-blue-600">
+                        Como Funciona
+                    </span>
+                    <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-blue-900">Fluxo de Atendimento</h2>
+                    <p class="max-w-[900px] text-gray-600 md:text-xl">
+                        Conheça o processo desde a inscrição até o início do atendimento na CETO/UFPR.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-8">
+                        <!-- Etapa 1 -->
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                                1
+                            </div>
+                            <div class="flex-1">
+                                <div class="rounded-lg border bg-white shadow-sm">
+                                    <div class="p-6 pb-4">
+                                        <h3 class="flex items-center gap-2 text-blue-900 font-semibold text-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                            </svg>
+                                            Inscrição via Formulário
+                                        </h3>
+                                    </div>
+                                    <div class="p-6 pt-0">
+                                        <p class="text-gray-600 mb-4">
+                                            Preencha nosso formulário online ou solicite ajuda via WhatsApp para o preenchimento.
+                                        </p>
+                                        <a href="formulario.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white px-4 py-2">
+                                            Acessar Formulário
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 2 -->
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                                2
+                            </div>
+                            <div class="flex-1">
+                                <div class="rounded-lg border bg-white shadow-sm">
+                                    <div class="p-6 pb-4">
+                                        <h3 class="flex items-center gap-2 text-blue-900 font-semibold text-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                            </svg>
+                                            Lista de Espera
+                                        </h3>
+                                    </div>
+                                    <div class="p-6 pt-0">
+                                        <p class="text-gray-600">
+                                            Após a inscrição, você entrará na lista de espera da especialidade correspondente. Alinhamos
+                                            horários desejados e realizamos o agendamento para avaliação conforme disponibilidade.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 3 -->
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                                3
+                            </div>
+                            <div class="flex-1">
+                                <div class="rounded-lg border bg-white shadow-sm">
+                                    <div class="p-6 pb-4">
+                                        <h3 class="flex items-center gap-2 text-blue-900 font-semibold text-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            Avaliação Inicial
+                                        </h3>
+                                    </div>
+                                    <div class="p-6 pt-0">
+                                        <p class="text-gray-600 mb-2">
+                                            Avaliação para determinar se o paciente será incluído no serviço.
+                                        </p>
+                                        <p class="text-sm text-gray-500">
+                                            <strong>Importante:</strong> Pacientes que já fazem terapia ocupacional em outro local não têm
+                                            prioridade.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 4 -->
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                                4
+                            </div>
+                            <div class="flex-1">
+                                <div class="rounded-lg border bg-white shadow-sm">
+                                    <div class="p-6 pb-4">
+                                        <h3 class="flex items-center gap-2 text-blue-900 font-semibold text-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                            </svg>
+                                            Contrato Terapêutico
+                                        </h3>
+                                    </div>
+                                    <div class="p-6 pt-0">
+                                        <div class="space-y-2 text-gray-600">
+                                            <p>Se incluído no serviço, será estabelecido um contrato terapêutico com:</p>
+                                            <ul class="space-y-1 text-sm ml-4">
+                                                <li>• Critérios de frequência (máximo 3 faltas)</li>
+                                                <li>• Renovação a cada semestre</li>
+                                                <li>• Modelos específicos para neurologia e TEA</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 5 -->
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                                5
+                            </div>
+                            <div class="flex-1">
+                                <div class="rounded-lg border bg-white shadow-sm">
+                                    <div class="p-6 pb-4">
+                                        <h3 class="flex items-center gap-2 text-blue-900 font-semibold text-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v0"></path>
+                                            </svg>
+                                            Prontuário e Atendimento
+                                        </h3>
+                                    </div>
+                                    <div class="p-6 pt-0">
+                                        <div class="space-y-2 text-gray-600">
+                                            <p>Criação do prontuário com número único contendo:</p>
+                                            <ul class="space-y-1 text-sm ml-4">
+                                                <li>• Ficha de anamnese</li>
+                                                <li>• Avaliação inicial</li>
+                                                <li>• Plano de tratamento</li>
+                                                <li>• Ficha de frequência</li>
+                                                <li>• Evoluções das sessões</li>
+                                                <li>• Relatório final</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start">
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <span class="inline-flex items-center rounded-full border border-blue-600 px-2.5 py-0.5 text-xs font-semibold text-blue-600">
+                                Contato
+                            </span>
+                            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-900">Entre em Contato</h2>
+                            <p class="text-gray-600 md:text-lg">
+                                Estamos aqui para esclarecer suas dúvidas e auxiliar no processo de inscrição.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="rounded-lg border bg-white shadow-sm">
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-blue-900">WhatsApp</p>
+                                            <p class="text-sm text-gray-600">(41) 99999-9999</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg border bg-white shadow-sm">
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-blue-900">E-mail</p>
+                                            <p class="text-sm text-gray-600">ceto@ufpr.br</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg border bg-white shadow-sm">
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-blue-900">Localização</p>
+                                            <p class="text-sm text-gray-600">Campus Jardim Botânico - UFPR</p>
+                                            <p class="text-sm text-gray-600">Curitiba, Paraná</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="#" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-green-600 hover:bg-green-700 text-white px-4 py-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                Falar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg border bg-white shadow-sm">
+                        <div class="p-6 pb-4">
+                            <h3 class="text-blue-900 font-semibold text-lg">Acesso Rápido</h3>
+                        </div>
+                        <div class="p-6 pt-0 space-y-4">
+                            <a href="formulario.html" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white px-4 py-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Fazer Inscrição
+                            </a>
+
+                            <a href="/login" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium border border-gray-300 bg-white hover:bg-gray-50 px-4 py-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Área do Paciente
+                            </a>
+
+                            <a href="admin-login.html" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                                Área Administrativa
+                            </a>
+
+                            <div class="pt-4 border-t">
+                                <h4 class="font-semibold text-blue-900 mb-2">Informações Importantes:</h4>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li>• Atendimentos gratuitos</li>
+                                    <li>• Supervisionados por docentes</li>
+                                    <li>• Vagas por lista de espera</li>
+                                    <li>• Cronograma acadêmico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full border-t bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-blue-600 rounded flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">UFPR</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">CETO/UFPR</h3>
+                            <p class="text-sm text-blue-200">Clínica-Escola de Terapia Ocupacional</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-blue-200">
+                        Formação acadêmica e atendimento à comunidade através da integração entre ensino, pesquisa e extensão.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-semibold">Serviços</h3>
+                    <ul class="space-y-2 text-sm text-blue-200">
+                        <li>Reabilitação Neurológica</li>
+                        <li>Desenvolvimento Infantil</li>
+                        <li>Transtorno do Espectro Autista</li>
+                        <li>Avaliação e Triagem</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-semibold">Informações</h3>
+                    <ul class="space-y-2 text-sm text-blue-200">
+                        <li>Como Funciona</li>
+                        <li>Fluxo de Atendimento</li>
+                        <li>Lista de Espera</li>
+                        <li>Contrato Terapêutico</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-semibold">Contato</h3>
+                    <ul class="space-y-2 text-sm text-blue-200">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>(41) 99999-9999</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>ceto@ufpr.br</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Campus Jardim Botânico</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-blue-800 text-center text-sm text-blue-200">
+                <p>
+                    © <span id="current-year"></span> CETO/UFPR - Clínica-Escola de Terapia Ocupacional. Universidade Federal do
+                    Paraná.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

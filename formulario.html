@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Inscrição - CETO/UFPR</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="form-body">
+  <!-- Header -->
+  <header class="header">
+      <div class="container">
+          <div class="header-content">
+              <div class="logo-section">
+                  <a href="index.html" class="btn-back">
+                      <i class="fas fa-arrow-left"></i>
+                      Voltar
+                  </a>
+                  <img src="public/images/logo_ufpr.jpg" alt="Logo UFPR" class="logo">
+                  <div class="logo-text">
+                      <h1>CETO/UFPR</h1>
+                      <p>Formulário de Inscrição</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="form-container">
+      <div class="form-intro">
+          <div class="badge">Inscrição CETO/UFPR</div>
+          <h1>Formulário de Cadastro</h1>
+          <p>Preencha todos os campos obrigatórios (*) para se inscrever na lista de espera da CETO/UFPR</p>
+      </div>
+
+      <form id="inscricaoForm" onsubmit="handleSubmit(event)">
+          <!-- Dados Pessoais -->
+          <div class="form-card">
+              <div class="form-header">
+                  <h2 class="form-title">
+                      <i class="fas fa-user"></i>
+                      Dados Pessoais
+                  </h2>
+              </div>
+              <div class="form-content">
+                  <div class="form-grid">
+                      <div class="form-group">
+                          <label for="nomeCompleto">Nome Completo *</label>
+                          <input 
+                              id="nomeCompleto" 
+                              type="text" 
+                              required 
+                              placeholder="Nome da pessoa que precisa do atendimento"
+                          >
+                      </div>
+                      <div class="form-group">
+                          <label for="cpf">CPF *</label>
+                          <input 
+                              id="cpf" 
+                              type="text" 
+                              required 
+                              placeholder="000.000.000-00"
+                          >
+                      </div>
+                  </div>
+
+                  <div class="form-grid">
+                      <div class="form-group">
+                          <label for="dataNascimento">Data de Nascimento</label>
+                          <input 
+                              id="dataNascimento" 
+                              type="date"
+                          >
+                      </div>
+                      <div class="form-group">
+                          <label for="idade">Idade</label>
+                          <input 
+                              id="idade" 
+                              type="number" 
+                              placeholder="Idade em anos"
+                          >
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="nomeCuidador">Nome do(s) cuidador(es) ou responsável(is) (se preciso)</label>
+                      <input 
+                          id="nomeCuidador" 
+                          type="text" 
+                          placeholder="Nome do responsável ou cuidador"
+                      >
+                  </div>
+
+                  <div class="form-grid">
+                      <div class="form-group">
+                          <label for="telefone">Telefone Celular (com DDD)</label>
+                          <input 
+                              id="telefone" 
+                              type="tel" 
+                              placeholder="(00) 00000-0000"
+                          >
+                      </div>
+                      <div class="form-group">
+                          <label for="email">E-mail</label>
+                          <input 
+                              id="email" 
+                              type="email" 
+                              placeholder="seu.email@exemplo.com"
+                          >
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Informações Clínicas -->
+          <div class="form-card">
+              <div class="form-header">
+                  <h2 class="form-title">
+                      <i class="fas fa-stethoscope"></i>
+                      Informações Clínicas
+                  </h2>
+              </div>
+              <div class="form-content">
+                  <div class="form-group">
+                      <label>Área de atendimento desejada:</label>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="areaAtendimento" value="neurologia-adulto">
+                              <span class="radio-custom"></span>
+                              Neurologia adulto
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="areaAtendimento" value="neurologia-infantil">
+                              <span class="radio-custom"></span>
+                              Neurologia infantil
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="areaAtendimento" value="saude-mental">
+                              <span class="radio-custom"></span>
+                              Saúde Mental
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="areaAtendimento" value="desenvolvimento-infantil-tea">
+                              <span class="radio-custom"></span>
+                              Desenvolvimento Infantil TEA
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="areaAtendimento" value="outro">
+                              <span class="radio-custom"></span>
+                              Outro:
+                              <input type="text" id="outroAreaAtendimento" placeholder="Especifique" class="input-inline">
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label>Diagnóstico da pessoa que necessita de atendimento (se houver):</label>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="diagnostico" value="avc">
+                              <span class="radio-custom"></span>
+                              Acidente Vascular Cerebral (AVC)
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="diagnostico" value="paralisia-cerebral">
+                              <span class="radio-custom"></span>
+                              Paralisia Cerebral (PC)
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="diagnostico" value="tea">
+                              <span class="radio-custom"></span>
+                              Transtorno do Espectro Autista (TEA)
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="diagnostico" value="nao-possui">
+                              <span class="radio-custom"></span>
+                              Não possui/ não sei
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="diagnostico" value="outro">
+                              <span class="radio-custom"></span>
+                              Outro:
+                              <input type="text" id="outroDiagnostico" placeholder="Especifique" class="input-inline">
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="dificuldades">Dificuldades apresentadas (descrever brevemente):</label>
+                      <textarea 
+                          id="dificuldades" 
+                          placeholder="Descreva brevemente as principais dificuldades apresentadas"
+                          rows="4"
+                      ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                      <label>Há quanto tempo apresenta a demanda?</label>
+                      <p class="form-help-text">Tempo de diagnóstico ou lesão, por exemplo.</p>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="1-3-meses">
+                              <span class="radio-custom"></span>
+                              1 a 3 meses
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="3-6-meses">
+                              <span class="radio-custom"></span>
+                              3 a 6 meses
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="6-meses-1-ano">
+                              <span class="radio-custom"></span>
+                              6 meses a 1 ano
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="ate-3-anos">
+                              <span class="radio-custom"></span>
+                              Até 3 anos
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="mais-3-anos">
+                              <span class="radio-custom"></span>
+                              Mais de 3 anos
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="desde-nascimento">
+                              <span class="radio-custom"></span>
+                              Desde o nascimento
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="nao-aplicavel">
+                              <span class="radio-custom"></span>
+                              Não aplicável (não apresenta lesões)
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tempoDemanda" value="outro">
+                              <span class="radio-custom"></span>
+                              Outro:
+                              <input type="text" id="outroTempoDemanda" placeholder="Especifique" class="input-inline">
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label>Realiza atendimento de Terapia Ocupacional em outro serviço atualmente?</label>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="fazTerapiaOutroLocal" value="sim">
+                              <span class="radio-custom"></span>
+                              Sim
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="fazTerapiaOutroLocal" value="nao">
+                              <span class="radio-custom"></span>
+                              Não
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Informações Adicionais -->
+          <div class="form-card">
+              <div class="form-header">
+                  <h2 class="form-title">
+                      <i class="fas fa-info-circle"></i>
+                      Informações Adicionais
+                  </h2>
+              </div>
+              <div class="form-content">
+                  <div class="form-group">
+                      <label>Como conheceu a CETO?</label>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="comoConheceu" value="internet">
+                              <span class="radio-custom"></span>
+                              Pesquisei na internet
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="comoConheceu" value="recomendacao-paciente">
+                              <span class="radio-custom"></span>
+                              Recomendação de uma pessoa que já foi ou é atendida pela CETO
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="comoConheceu" value="indicacao-profissional">
+                              <span class="radio-custom"></span>
+                              Indicação de um profissional de saúde
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="comoConheceu" value="indicacao-unidade-saude">
+                              <span class="radio-custom"></span>
+                              Indicação da Unidade de Saúde
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="comoConheceu" value="indicacao-hospital">
+                              <span class="radio-custom"></span>
+                              Indicação do hospital em que fui atendido
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="comoConheceu" value="outro">
+                              <span class="radio-custom"></span>
+                              Outro:
+                              <input type="text" id="outroComoConheceu" placeholder="Especifique" class="input-inline">
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="instituicaoEncaminhamento">Caso foi encaminhado por alguma instituição ou profissional favor descrever qual o local</label>
+                      <input 
+                          id="instituicaoEncaminhamento" 
+                          type="text" 
+                          placeholder="Nome da instituição ou profissional"
+                      >
+                  </div>
+
+                  <div class="form-group">
+                      <label>Preferência de turno para atendimento:</label>
+                      <p class="form-help-text">É possível selecionar mais de uma opção.</p>
+                      <div class="checkbox-group">
+                          <label class="checkbox-item">
+                              <input type="checkbox" name="preferenciaTurno" value="manha">
+                              <span class="checkbox-custom"></span>
+                              Manhã
+                          </label>
+                          <label class="checkbox-item">
+                              <input type="checkbox" name="preferenciaTurno" value="tarde">
+                              <span class="checkbox-custom"></span>
+                              Tarde
+                          </label>
+                          <label class="checkbox-item">
+                              <input type="checkbox" name="preferenciaTurno" value="noite">
+                              <span class="checkbox-custom"></span>
+                              Noite
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label>No caso de abertura de vagas no período da pandemia, tem preferência por qual tipo de atendimento?</label>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="tipoAtendimentoPandemia" value="presencial">
+                              <span class="radio-custom"></span>
+                              Atendimento presencial (ir até a clínica para ser atendido)
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tipoAtendimentoPandemia" value="remoto">
+                              <span class="radio-custom"></span>
+                              Atendimento remoto (atendimento por ligações de vídeo)
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="tipoAtendimentoPandemia" value="ambos">
+                              <span class="radio-custom"></span>
+                              Atendimento presencial e/ou remoto (de acordo com a indicação da terapeuta)
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="comentarios">Comentários adicionais (se houver):</label>
+                      <p class="form-help-text">Este espaço pode ser utilizado para informar a atualização de algum dado pessoal, registrar dúvidas e sugestões.</p>
+                      <textarea 
+                          id="comentarios" 
+                          placeholder="Comentários, dúvidas ou sugestões"
+                          rows="4"
+                      ></textarea>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Termos -->
+          <div class="form-card alert-card">
+              <div class="alert-content">
+                  <div class="alert-icon">
+                      <i class="fas fa-exclamation-circle"></i>
+                  </div>
+                  <div class="alert-text">
+                      <h3>Termo de Consentimento</h3>
+                      <p>
+                          Estou ciente que este é um cadastro em fila de espera para avaliação, e que não garante uma vaga
+                          para atendimento. A disponibilidade de vagas depende dos projetos ofertados e da ordem de
+                          cadastro, sendo um serviço aberto à comunidade, sem distinção de vínculo com a UFPR ou com
+                          servidor. A data do primeiro cadastro será respeitada, sendo esta apenas uma atualização dos
+                          meus dados.
+                      </p>
+                      <div class="radio-group">
+                          <label class="radio-item">
+                              <input type="radio" name="concordaTermos" value="ciente" required>
+                              <span class="radio-custom"></span>
+                              Ciente e de acordo
+                          </label>
+                          <label class="radio-item">
+                              <input type="radio" name="concordaTermos" value="nao-concordo">
+                              <span class="radio-custom"></span>
+                              Não concordo (neste caso o seu cadastro é invalidado)
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Botão de Envio -->
+          <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fas fa-paper-plane"></i>
+                  Enviar Formulário
+              </button>
+          </div>
+      </form>
+  </div>
+
+  <script>
+      function handleSubmit(event) {
+          event.preventDefault();
+          
+          // Verificar se concorda com os termos
+          const concordaTermos = document.querySelector('input[name="concordaTermos"]:checked')?.value;
+          if (concordaTermos !== 'ciente') {
+              alert("É necessário concordar com os termos para prosseguir.");
+              return;
+          }
+          
+          // Aqui seria a integração com o backend
+          console.log("Formulário enviado com sucesso!");
+          
+          // Redirecionar para página de sucesso
+          window.location.href = "formulario-sucesso.html";
+      }
+      
+      // Mostrar/esconder campos "outro" quando selecionados
+      document.querySelectorAll('input[type="radio"]').forEach(radio => {
+          radio.addEventListener('change', function() {
+              const name = this.name;
+              const value = this.value;
+              const outroInput = document.getElementById('outro' + name.charAt(0).toUpperCase() + name.slice(1));
+              
+              if (outroInput) {
+                  if (value === 'outro') {
+                      outroInput.style.display = 'inline-block';
+                  } else {
+                      outroInput.style.display = 'none';
+                  }
+              }
+          });
+      });
+  </script>
+</body>
+</html>
